@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>机器学习-交叉验证 | GongTi Blog</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/component.css" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <meta name="generator" content="GongTi Blog">
+  <script src="http://static.duoshuo.com/embed.js"></script>
+  
+  
+  
+
+  
+
+</head>
+<body>
+<div class="container">
+    <div class="mp-pusher" id="mp-pusher">
+        <i id="scroll-up" class="fa fa-angle-up"></i>
+        <nav id="mp-menu" class="mp-menu">
+            <div class="mp-level">
+                <a data-pjax class="back-home" style="font-size: 20px" href="/"><h2 ><i class="fa fa-home"></i>
+                        Home</h2></a>
+                <ul class="first-level">
+                    <li>
+                        <a class="fa fa-archive" href="#"><i class="fa fa-angle-left">
+                            </i>&nbsp;&nbsp;Archive</a>
+                        <div class="mp-level page-list">
+                            <h2 ><i class="fa fa-archive"></i>
+                                Archive</h2>
+                            <a class="mp-back" href="#">back</a>
+                            <form id="search-form" action="">
+                                <input type="text" class="search search-archive" placeholder="Search.."/>
+                            </form>
+                            <ul>
+                                <div class="mp-scroll">
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2015/11/13/机器学习-交叉验证/">机器学习-交叉验证</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2015/11/13/python记录/">python记录</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2015/11/12/中文/">中文</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2015/11/09/my-first-blog/">my first blog</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2015/11/09/hello-world/">Hello World</a>
+                                </li>
+                                
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fa fa-copy" href="#"><i class="fa fa-angle-left">
+                            </i>&nbsp;&nbsp;Categories</a>
+
+                        <div class="mp-level page-list">
+                            <h2 ><i class="fa fa-copy"></i>
+                                Categories</h2>
+                            <a class="mp-back" href="#">back</a>
+                            <form id="search-form" action="">
+                                <input type="text" class="search search-category" placeholder="Search.."/>
+                            </form>
+                            <ul>
+                                <div class="mp-scroll">
+                                
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fa fa-tags" href="#"><i class="fa fa-angle-left">
+                            </i>&nbsp;&nbsp;Tags</a>
+                        <div class="mp-level page-list">
+                            <h2 ><i class="fa fa-tags"></i>
+                                Tags</h2>
+                            <a class="mp-back" href="#">back</a>
+                            <form id="search-form" action="">
+                                <input type="text" class="search search-tag" placeholder="Search.."/>
+                            </form>
+                            <ul>
+                                <div class="mp-scroll">
+                                
+                                <li class="search-tag-li mp-pjax">
+                                    <a href="/tags/Git/">&nbsp;&nbsp;&nbsp;Git</a>
+                                    <small>1</small>
+                                </li>
+                                
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="mp-pjax"><a class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a></li>
+                    <li><a class="fa fa-github" href="#">&nbsp;&nbsp;&nbsp;Github</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
+        <div id="pjax">
+            <div class="pjax-hidden" style="display: none">
+                
+                    <a  data-pjax href="/2015/11/13/机器学习-交叉验证/">机器学习-交叉验证</a>
+                
+                    <a  data-pjax href="/2015/11/13/python记录/">python记录</a>
+                
+                    <a  data-pjax href="/2015/11/12/中文/">中文</a>
+                
+                    <a  data-pjax href="/2015/11/09/my-first-blog/">my first blog</a>
+                
+                    <a  data-pjax href="/2015/11/09/hello-world/">Hello World</a>
+                
+                
+                
+                    <a data-pjax href="/tags/Git/">&nbsp;&nbsp;Git</a>
+                
+                <a data-pjax class="fa fa-user" href="/about">&nbsp;&nbsp;&nbsp;About me</a>
+            </div>
+            <nav class="nexus">
+                <li  style="border-left: 1px solid #c6d0da;">
+                    <a id="trigger" href="#"><i class="fa fa-bars"></i></a>
+                </li>
+                <li ><a id="nexus-back" data-pjax href="/">GongTi Blog</a></li>
+                
+                <div id="nav-container">
+                    <div class="post-navbar" style="line-height: 63px;display:none">
+                        <li id="navbar-title"><a href="#">机器学习-交叉验证</a></li>
+                        <li id="navbar-toc" style="border-left: none">
+                            <a style="padding-right: 15px">
+                                <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
+                            </a>
+                            <div class="hidden-box">
+                                <ul id="toc"></ul>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+                
+            </nav>
+
+            <div class="scroller">
+            <div class="scroller-inner">
+
+
+<!-- -->
+<!--<body class="post-template">-->
+<!---->
+  
+
+<main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+                  <div class="tag-tile">
+                      
+                  </div>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">机器学习-交叉验证</h1>
+
+                    <div class="post-meta">
+                        Post on<span class="fa fa-clock-o"></span>
+                        <time datetime="2015-11-13T09:02:24.000Z"
+                              itemprop="datePublished">2015-11-13</time>
+                    </div>
+    </span>
+
+        <section class="post-content">
+            <h2 id="机器学习_交叉验证">机器学习 交叉验证</h2><p>如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。</p>
+<pre><code>训练集用来训练模型
+验证集用来模型选择
+测试集用来最终对学习方法的评估
+</code></pre><p>在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。</p>
+<hr>
+<p>但是，在许多实际应用中数据是不足的，为了选择好的模型，可以采用交叉验证方法，交叉验证的基本思想是重复的使用数据；把给定的数据进行切分，将切分的数据集组合为训练集和测试集，在此基础上反复地进行训练。测试以及模型选择。</p>
+<hr>
+<h3 id="1-简单交叉验证">1.简单交叉验证</h3><p>简单交叉验证方法是：首先随机地将已给数据分为两部分，一部分作为训练集，另一部分作为测试集（如，70%的数据为训练集，30%的数据作为测试集）；然后用训练集在各种条件下（如，不同的参个数）训练模型，从而得到不同的模型；在测试集上评价各个模型的测试误差，选出测试误差最小的模型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> cross_validation</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>iris = datasets.load_iris()</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>iris.data.shape, iris.target.shape</span><br><span class="line">((<span class="number">150</span>, <span class="number">4</span>), (<span class="number">150</span>,))</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = cross_validation.train_test_split(</span><br><span class="line"><span class="prompt">... </span>    iris.data, iris.target, test_size=<span class="number">0.4</span>, random_state=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train.shape, y_train.shape</span><br><span class="line">((<span class="number">90</span>, <span class="number">4</span>), (<span class="number">90</span>,))</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_test.shape, y_test.shape</span><br><span class="line">((<span class="number">60</span>, <span class="number">4</span>), (<span class="number">60</span>,))</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf = svm.SVC(kernel=<span class="string">'linear'</span>, C=<span class="number">1</span>).fit(X_train, y_train)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf.score(X_test, y_test)                           </span><br><span class="line"><span class="number">0.96</span>...</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="2-K折交叉验证">2.K折交叉验证</h3><p>应用最多的就是K折交叉验证（K-fold Cross Valication）方法如下：首先随机地将已给的数据切分为S个互不相同的子集；然后利用 S-1 个子集的数据训练模型，利用余下的子集测试模型，将这一过程对可能的K中选择重复进行；最后选出K次测评中平均测试误差的最小的模型。</p>
+<p>不同的划分策略：</p>
+<p>####K-fold<br>根据数据集，进行横向切分。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> KFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>kf = KFold(<span class="number">4</span>, n_folds=<span class="number">2</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> kf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span> <span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span>] [<span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X = np.array([[<span class="number">0.</span>, <span class="number">0.</span>], [<span class="number">1.</span>, <span class="number">1.</span>], [-<span class="number">1.</span>, -<span class="number">1.</span>], [<span class="number">2.</span>, <span class="number">2.</span>]])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>y = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]</span><br></pre></td></tr></table></figure></p>
+<p>####Stratified k-fold<br>每个集合中样本标签比例大致相等。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> StratifiedKFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>labels = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>skf = StratifiedKFold(labels, <span class="number">3</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> skf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">5</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">2</span> <span class="number">6</span> <span class="number">7</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>] [<span class="number">3</span> <span class="number">8</span> <span class="number">9</span>]</span><br></pre></td></tr></table></figure></p>
+<p>####Leave-One-Out<br>K折交叉验证的特殊形式K=N,<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> LeaveOneOut</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>loo = LeaveOneOut(<span class="number">4</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> loo:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span>] [<span class="number">2</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>] [<span class="number">3</span>]</span><br></pre></td></tr></table></figure></p>
+<hr>
+<hr>
+<p>使用交叉验证最简单的方式就是使用 <code>cross_val_score</code> 函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf = svm.SVC(kernel=<span class="string">'linear'</span>, C=<span class="number">1</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores = cross_validation.cross_val_score(</span><br><span class="line"><span class="prompt">... </span>   clf, iris.data, iris.target, cv=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores                                              </span><br><span class="line">array([ <span class="number">0.96</span>...,  <span class="number">1.</span>  ...,  <span class="number">0.96</span>...,  <span class="number">0.96</span>...,  <span class="number">1.</span>        ])</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>print(<span class="string">"Accuracy: %0.2f (+/- %0.2f)"</span> % (scores.mean(), scores.std() * <span class="number">2</span>))</span><br><span class="line">Accuracy: <span class="number">0.98</span> (+/- <span class="number">0.03</span>)</span><br></pre></td></tr></table></figure></p>
+<p>还可以使用参数score来选择不同的评估机制。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores = cross_validation.cross_val_score(clf, iris.data, iris.target, cv=<span class="number">5</span>, scoring=<span class="string">'f1_weighted'</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores                                              </span><br><span class="line">array([ <span class="number">0.96</span>...,  <span class="number">1.</span>  ...,  <span class="number">0.96</span>...,  <span class="number">0.96</span>...,  <span class="number">1.</span>        ])</span><br></pre></td></tr></table></figure></p>
+<p>可选择的有：<br><img src="./1446197312823.png" alt="Alt text"></p>
+
+        </section>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
+            
+            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
+            
+            <a class="share-button" data-original-title title>Share this Post</a>
+            
+            <a data-pjax class="older-posts" href="/2015/11/13/python记录/">Next Post →</a>
+            
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
+        </section>
+
+
+    </article>
+</main>
+
+
+  
+<footer class="site-footer">
+    
+    <div class="inner">
+        <section class="copyright"><a href="/"></a> &copy; GongTi Blog 2014</section>
+        <section class="poweredby">Published with <a target="_blank" href="http://hexo.io/">Hexo   </a> and Theme by <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">Kael</a></section>
+    </div>
+</footer>
+</div>
+</div><!-- /scroller -->
+
+</div><!-- /pusher -->
+</div><!-- /container -->
+</div>
+
+<!-- Easter eggs -->
+
+<div class="egg animated">
+    <a id="close-button" href="#">X</a>
+    <div class="block">
+        <div class="loading">
+            <span class="ball1"></span>
+            <span class="ball2"></span>
+        </div>
+    </div>
+</div>
+  
+<script src="//cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    if (!window.jQuery) {
+        var script = document.createElement('script');
+        script.src = "/js/jquery.min.js";
+        document.body.appendChild(script);
+    }
+</script>
+<script type="text/javascript" src="/js/lib.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
