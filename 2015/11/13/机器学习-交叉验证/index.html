@@ -29,8 +29,8 @@
 在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。
 
 但是，在许多实际应">
-<meta property="og:image" content="http://yoursite.com/./1446197312823.png">
-<meta property="og:updated_time" content="2015-11-13T10:29:42.165Z">
+<meta property="og:image" content="http://7xo9wb.com1.z0.glb.clouddn.com/5.png">
+<meta property="og:updated_time" content="2015-11-13T11:08:41.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="交叉验证">
 <meta name="twitter:description" content="如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。
@@ -139,7 +139,7 @@
 <hr>
 <p>使用交叉验证最简单的方式就是使用 <code>cross_val_score</code> 函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf = svm.SVC(kernel=<span class="string">'linear'</span>, C=<span class="number">1</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores = cross_validation.cross_val_score(</span><br><span class="line"><span class="prompt">... </span>   clf, iris.data, iris.target, cv=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores                                              </span><br><span class="line">array([ <span class="number">0.96</span>...,  <span class="number">1.</span>  ...,  <span class="number">0.96</span>...,  <span class="number">0.96</span>...,  <span class="number">1.</span>        ])</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>print(<span class="string">"Accuracy: %0.2f (+/- %0.2f)"</span> % (scores.mean(), scores.std() * <span class="number">2</span>))</span><br><span class="line">Accuracy: <span class="number">0.98</span> (+/- <span class="number">0.03</span>)</span><br></pre></td></tr></table></figure></p>
 <p>还可以使用参数score来选择不同的评估机制。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores = cross_validation.cross_val_score(clf, iris.data, iris.target, cv=<span class="number">5</span>, scoring=<span class="string">'f1_weighted'</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores                                              </span><br><span class="line">array([ <span class="number">0.96</span>...,  <span class="number">1.</span>  ...,  <span class="number">0.96</span>...,  <span class="number">0.96</span>...,  <span class="number">1.</span>        ])</span><br></pre></td></tr></table></figure></p>
-<p>可选择的有：<br><img src="./1446197312823.png" alt="Alt text"></p>
+<p>可选择的有：<br><img src="http://7xo9wb.com1.z0.glb.clouddn.com/5.png" alt="Alt text"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -220,11 +220,11 @@
 			
 		
 			
-				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
 			
 		
 		</ul>
