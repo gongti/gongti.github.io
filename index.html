@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="GongTi . Blog">GongTi . Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -81,20 +81,136 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/11/13/机器学习-交叉验证/" title="机器学习-交叉验证" itemprop="url">机器学习-交叉验证</a>
+      <a href="/2015/11/13/机器学习算法/" title="机器学习算法" itemprop="url">机器学习算法</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
 		
   <p class="article-time">
-    <time datetime="2015-11-13T09:02:24.000Z" itemprop="datePublished"> 發表於 2015-11-13</time>
+    <time datetime="2015-11-13T10:30:26.000Z" itemprop="datePublished"> 发表于 2015-11-13</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id="机器学习_交叉验证">机器学习 交叉验证</h2><p>如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。</p>
+        <p>机器学习有很多算法，不过大的方面可分为两类：一个是学习的方式，一个是算法的类似性。</p>
+<h1 id="学习方式">学习方式</h1><p>根据数据类型的不同，对一个问题的建模有不同的方式。在机器学习或者人工智能领域，人们首先会考虑算法的学习方式。在机器学习领域，有几种主要的学习方式。将算法按照学习方式分类是一个不错的想法，这样可以让人们在建模和算法选择的时候考虑能根据输入数据来选择最合适的算法来获得最好的结果。<br>算法的主要学习方式和学习模型主要有以下几个：</p>
+<ul>
+<li><p>监督学习：输入数据被称为训练数据，它们有已知的标签或者结果，比如垃圾邮件/非垃圾邮件或者某段时间的股票价格。模型的参数确定需要通过一个训练的过程，在这个过程中模型将会要求做出预测，当预测不符时，则需要做出修改。</p>
+</li>
+<li><p>无监督学习：输入数据不带标签或者没有一个已知的结果。通过推测输入数据中存在的结构来建立模型。这类问题的例子有关联规则学习和聚类。算法的例子包括Apriori算法和K-means算法。</p>
+</li>
+<li><p>半监督学习：输入数据由带标记的和不带标记的组成。合适的预测模型虽然已经存在，但是模型在预测的同时还必须能通过发现潜在的结构来组织数据。这类问题包括分类和回归。典型算法包括对一些其他灵活的模型的推广，这些模型都对如何给未标记数据建模做出了一些假设。</p>
+</li>
+<li><p>强化学习：输入数据作为来自环境的激励提供给模型，且模型必须作出反应。反馈并不像监督学习那样来自于训练的过程，而是作为环境的惩罚或者是奖赏。典型问题有系统和机器人控制。算法的例子包括Q-学习和时序差分学习（Temporal Difference Learning）。</p>
+</li>
+</ul>
+<h1 id="算法的类似性">算法的类似性</h1><p>根据算法的功能和形式的类似性，我们可以把算法分类，比如说基于树的算法，基于神经网络的算法等等。当然，机器学习的范围非常庞大，有些算法很难明确归类到某一类。而对于有些分类来说，同一分类的算法可以针对不同类型的问题。</p>
+<p>这里，我们尽量把常用的算法按照最容易理解的方式进行分类。</p>
+<h1 id="回归分析">回归分析</h1><p>回归是这样一种建模方式，它先确定一个衡量模型预测误差的量，然后通过这个量来反复优化变量之间的关系。回归方法是统计学的主要应用，被归为统计机器学习。这有些让人迷惑，因为我们可以用回归来指代一类问题和一类算法。实际上，回归是一个过程。以下是一些例子：</p>
+<blockquote>
+<p>普通最小二乘法<br>逻辑回归<br>逐步回归<br>多元自适应样条回归(MARS)<br>局部多项式回归拟合(LOESS)</p>
+</blockquote>
+<h1 id="正则化方法">正则化方法</h1><p>这是对另一种方法（通常是回归分析方法）的扩展，它惩罚复杂度高的模型，倾向推广性好的更加简单的模型。我在这里列下了一些正则化的方法，因为他们流行、强大，而且通常只是对其他方法简单的改进。</p>
+<blockquote>
+<p>岭回归<br>套索算法(LASSO)<br>弹性网络</p>
+</blockquote>
+<h1 id="基于实例的方法">基于实例的方法</h1><p>基于实例的学习模型对决策问题进行建模，这些决策基于训练数据中被认为重要的或者模型所必需的实例。这类方法通常会建立一个范例数据库，然后根据某个相似性衡量标准来把新数据和数据库进行比较，从而找到最匹配的项，最后作出预测。因此，基于实例的方法还被叫做“赢者通吃”方法和基于记忆的学习。这种方法的重点在于已有实例的表示以及实例间相似性的衡量标准。</p>
+<blockquote>
+<p>K最近邻算法(kNN)<br>学习矢量量化(LVQ)<br>自组织映射(SOM)</p>
+</blockquote>
+<h1 id="决策树学习">决策树学习</h1><p>决策树方法对决策过程进行建模，决策是基于数据中属性的实际数值。决策在树形结构上分叉直到对特定的某个记录能做出预测。在分类或者回归的问题中我们用数据来训练决策树。</p>
+<blockquote>
+<p>迭代二叉树3代(ID3)<br>C4.5算法<br>分类与回归树算法(CART)<br>卡方自动互动检视(CHAID)<br>单层决策树<br>随机森林<br>多元自适应样条回归(MARS)<br>梯度推进机(GBM)</p>
+</blockquote>
+<h1 id="贝叶斯算法">贝叶斯算法</h1><p>贝叶斯方法是那些明确地在分类和回归问题中应用贝叶斯定理的算法。</p>
+<blockquote>
+<p>朴素贝叶斯算法<br>AODE算法<br>贝叶斯信度网络(BBN)</p>
+</blockquote>
+<h1 id="核函数方法">核函数方法</h1><p>核函数方法中最为出名的是流行的支持向量机算法，它其实是一系列方法。核函数方法关心的是如何把输入数据映射到一个高维度的矢量空间，在这个空间中，某些分类或者回归问题可以较容易地解决。</p>
+<blockquote>
+<p>支持向量机(SVM)<br>径向基函数(RBF)<br>线性判别分析(LDA)</p>
+</blockquote>
+<h1 id="聚类方法">聚类方法</h1><p>就像回归一样，聚类既表示一类问题，也表示一类方法。聚类方法一般按照建模方式来划分：基于质心的或者层级结构的。所有的方法都是利用数据的内在结构来尽量地把数据归入具有最大共性的一类里。</p>
+<blockquote>
+<p>K均值法<br>最大期望算法(EM)</p>
+</blockquote>
+<h1 id="关联规则学习">关联规则学习</h1><p>关联规则学习是提取规则的一类算法，这些规则能最好地解释观测到的数据中的变量之间的关系。这些规则能在大型多维数据集中发现重要且在商业上有用的关联，然后进一步被利用。</p>
+<blockquote>
+<p>Apriori算法<br>FP-Growth算法<br>Eclat算法</p>
+</blockquote>
+<h1 id="降维方法">降维方法</h1><p>如同聚类方法，降维方法试图利用数据中的内在结构来总结或描述数据，所不同的是它以无监督的方式利用更少的信息。这对于可视化高维数据或者为之后的监督学习简化数据都有帮助。</p>
+<blockquote>
+<p>主成分分析(PCA)<br>偏最小二乘法回归(PLS)<br>萨蒙映射<br>多维尺度分析(MDS)<br>投影寻踪</p>
+</blockquote>
+<h1 id="集成方法">集成方法</h1><p>集成方法由多个较弱模型组合而成，这些子模型独立训练，它们的预测结果以某种方式整合起来得出总的预测。很多努力都集中在选择什么类型的学习模型作为子模型，以及用什么方式整合它们的结果。这是一类非常强大的技术，因此也很流行。</p>
+<blockquote>
+<p>推进技术(Boosting)<br>自展集成(Bagging)<br>适应性推进(AdaBoost)<br>层叠泛化策略(Blending)<br>梯度推进机(GBM)<br>随机森林</p>
+</blockquote>
+<h1 id="人工神经网络">人工神经网络</h1><p>人工神经网络是受启发于生物神经网络的结构和/或功能的算法。它们是一类常用在回归和分类问题中的模式匹配方法，但其实这个庞大的子类包含了上百种算法和算法的变形，可以解决各种类型的问题。一些经典流行的方法包括（我已经把深度学习从这个类中分出来了）：</p>
+<blockquote>
+<p>感知器<br>反向传播算法<br>Hopfield神经网络<br>自适应映射(SOM)<br>学习矢量量化(LVQ)</p>
+</blockquote>
+<h1 id="深度学习">深度学习</h1><p>深度学习方法是利用便宜冗余的计算资源对人工神经网络的现代改进版。这类方法试图建立大得多也复杂得多的神经网络，就如前面说到的，许多方法都是基于大数据集中非常有限的标记数据来解决半监督学习问题。</p>
+<blockquote>
+<p>受限玻尔兹曼机(RBM)<br>深度信念网(DBN)<br>卷积神经网络<br>层叠自动编码器(SAE)</p>
+</blockquote>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/ml/">ml</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/11/13/机器学习-交叉验证/" title="交叉验证" itemprop="url">交叉验证</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
+		
+  <p class="article-time">
+    <time datetime="2015-11-13T09:02:24.000Z" itemprop="datePublished"> 发表于 2015-11-13</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。</p>
 <pre><code>训练集用来训练模型
 验证集用来模型选择
 测试集用来最终对学习方法的评估
@@ -102,14 +218,14 @@
 <hr>
 <p>但是，在许多实际应用中数据是不足的，为了选择好的模型，可以采用交叉验证方法，交叉验证的基本思想是重复的使用数据；把给定的数据进行切分，将切分的数据集组合为训练集和测试集，在此基础上反复地进行训练。测试以及模型选择。</p>
 <hr>
-<h3 id="1-简单交叉验证">1.简单交叉验证</h3><p>简单交叉验证方法是：首先随机地将已给数据分为两部分，一部分作为训练集，另一部分作为测试集（如，70%的数据为训练集，30%的数据作为测试集）；然后用训练集在各种条件下（如，不同的参个数）训练模型，从而得到不同的模型；在测试集上评价各个模型的测试误差，选出测试误差最小的模型。</p>
+<h1 id="1-简单交叉验证">1.简单交叉验证</h1><p>简单交叉验证方法是：首先随机地将已给数据分为两部分，一部分作为训练集，另一部分作为测试集（如，70%的数据为训练集，30%的数据作为测试集）；然后用训练集在各种条件下（如，不同的参个数）训练模型，从而得到不同的模型；在测试集上评价各个模型的测试误差，选出测试误差最小的模型。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> cross_validation</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>iris = datasets.load_iris()</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>iris.data.shape, iris.target.shape</span><br><span class="line">((<span class="number">150</span>, <span class="number">4</span>), (<span class="number">150</span>,))</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = cross_validation.train_test_split(</span><br><span class="line"><span class="prompt">... </span>    iris.data, iris.target, test_size=<span class="number">0.4</span>, random_state=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train.shape, y_train.shape</span><br><span class="line">((<span class="number">90</span>, <span class="number">4</span>), (<span class="number">90</span>,))</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_test.shape, y_test.shape</span><br><span class="line">((<span class="number">60</span>, <span class="number">4</span>), (<span class="number">60</span>,))</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf = svm.SVC(kernel=<span class="string">'linear'</span>, C=<span class="number">1</span>).fit(X_train, y_train)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf.score(X_test, y_test)                           </span><br><span class="line"><span class="number">0.96</span>...</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="2-K折交叉验证">2.K折交叉验证</h3><p>应用最多的就是K折交叉验证（K-fold Cross Valication）方法如下：首先随机地将已给的数据切分为S个互不相同的子集；然后利用 S-1 个子集的数据训练模型，利用余下的子集测试模型，将这一过程对可能的K中选择重复进行；最后选出K次测评中平均测试误差的最小的模型。</p>
+<h1 id="2-K折交叉验证">2.K折交叉验证</h1><p>应用最多的就是K折交叉验证（K-fold Cross Valication）方法如下：首先随机地将已给的数据切分为S个互不相同的子集；然后利用 S-1 个子集的数据训练模型，利用余下的子集测试模型，将这一过程对可能的K中选择重复进行；最后选出K次测评中平均测试误差的最小的模型。</p>
 <p>不同的划分策略：</p>
-<p>####K-fold<br>根据数据集，进行横向切分。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> KFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>kf = KFold(<span class="number">4</span>, n_folds=<span class="number">2</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> kf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span> <span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span>] [<span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X = np.array([[<span class="number">0.</span>, <span class="number">0.</span>], [<span class="number">1.</span>, <span class="number">1.</span>], [-<span class="number">1.</span>, -<span class="number">1.</span>], [<span class="number">2.</span>, <span class="number">2.</span>]])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>y = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]</span><br></pre></td></tr></table></figure></p>
-<p>####Stratified k-fold<br>每个集合中样本标签比例大致相等。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> StratifiedKFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>labels = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>skf = StratifiedKFold(labels, <span class="number">3</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> skf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">5</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">2</span> <span class="number">6</span> <span class="number">7</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>] [<span class="number">3</span> <span class="number">8</span> <span class="number">9</span>]</span><br></pre></td></tr></table></figure></p>
-<p>####Leave-One-Out<br>K折交叉验证的特殊形式K=N,<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> LeaveOneOut</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>loo = LeaveOneOut(<span class="number">4</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> loo:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span>] [<span class="number">2</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>] [<span class="number">3</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="K-fold">K-fold</h2><p>根据数据集，进行横向切分。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> KFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>kf = KFold(<span class="number">4</span>, n_folds=<span class="number">2</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> kf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span> <span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span>] [<span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X = np.array([[<span class="number">0.</span>, <span class="number">0.</span>], [<span class="number">1.</span>, <span class="number">1.</span>], [-<span class="number">1.</span>, -<span class="number">1.</span>], [<span class="number">2.</span>, <span class="number">2.</span>]])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>y = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]</span><br></pre></td></tr></table></figure></p>
+<h2 id="Stratified_k-fold">Stratified k-fold</h2><p>每个集合中样本标签比例大致相等。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> StratifiedKFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>labels = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>skf = StratifiedKFold(labels, <span class="number">3</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> skf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">5</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">2</span> <span class="number">6</span> <span class="number">7</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>] [<span class="number">3</span> <span class="number">8</span> <span class="number">9</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="Leave-One-Out">Leave-One-Out</h2><p>K折交叉验证的特殊形式K=N,<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> LeaveOneOut</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>loo = LeaveOneOut(<span class="number">4</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> loo:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span>] [<span class="number">2</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>] [<span class="number">3</span>]</span><br></pre></td></tr></table></figure></p>
 <hr>
 <hr>
 <p>使用交叉验证最简单的方式就是使用 <code>cross_val_score</code> 函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf = svm.SVC(kernel=<span class="string">'linear'</span>, C=<span class="number">1</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores = cross_validation.cross_val_score(</span><br><span class="line"><span class="prompt">... </span>   clf, iris.data, iris.target, cv=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores                                              </span><br><span class="line">array([ <span class="number">0.96</span>...,  <span class="number">1.</span>  ...,  <span class="number">0.96</span>...,  <span class="number">0.96</span>...,  <span class="number">1.</span>        ])</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>print(<span class="string">"Accuracy: %0.2f (+/- %0.2f)"</span> % (scores.mean(), scores.std() * <span class="number">2</span>))</span><br><span class="line">Accuracy: <span class="number">0.98</span> (+/- <span class="number">0.03</span>)</span><br></pre></td></tr></table></figure></p>
@@ -126,54 +242,10 @@
 <div class="article-catetags">
 
 
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/11/13/python记录/" title="python记录" itemprop="url">python记录</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
-		
-  <p class="article-time">
-    <time datetime="2015-11-13T08:42:20.000Z" itemprop="datePublished"> 發表於 2015-11-13</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/ml/">ml</a>
+  </div>
 
 </div>
 
@@ -200,79 +272,20 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/11/12/中文/" title="中文" itemprop="url">中文</a>
+      <a href="/2015/11/13/python记录/" title="python 随机数" itemprop="url">python 随机数</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
 		
   <p class="article-time">
-    <time datetime="2015-11-12T13:30:02.000Z" itemprop="datePublished"> 發表於 2015-11-12</time>
+    <time datetime="2015-11-13T08:42:20.000Z" itemprop="datePublished"> 发表于 2015-11-13</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/11/09/my-first-blog/" title="my first blog" itemprop="url">my first blog</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
-		
-  <p class="article-time">
-    <time datetime="2015-11-09T13:38:41.000Z" itemprop="datePublished"> 發表於 2015-11-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="Git笔记">Git笔记</h2><p>[toc]</p>
-<h3 id="git简介">git简介</h3><ol>
-<li><p>git是分布式的，svn是集中式的<br><strong>传统集中式版本控制系统： </strong><br><img src="/source/img/1.png"><br>集中式的版本控制系统都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。多年以来，这已成为版本控制系统的标准做法。<br>这种做法带来了许多好处，特别是相较于老式的本地VCS 来说。现在，每个人都可以一定程度上看到项目中的其他人正在做些什么。而管理员也可以轻松掌控每个开发者的权限。<br>事分两面，有好有坏。这么做最显而易见的缺点是中央服务器的单点故障。若是宕机一小时，那么在这一小时内，谁都无法提交更新、还原、对比等，也就无法协同工作。如果中央服务器的磁盘发生故障，并且没做过备份或者备份得不够及时的话，还会有丢失数据的风险。最坏的情况是彻底丢失整个项目的所有历史更改记录，被客户端提取出来的某些快照数据除外，但这样的话依然是个问题，你不能保证所有的数据都已经有人提取出来。<br><strong>分布式版本控制系统：</strong><br><img src="http://7xo9wb.com1.z0.glb.clouddn.com/1.png" alt="Alt text"><br>首先，分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。既然每个人电脑上都有一个完整的版本库，那多个人如何协作呢？比方说你在自己电脑上改了文件A，你的同事也在他的电脑上改了文件A，这时，你们俩之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。<br>和集中式版本控制系统相比，分布式版本控制系统的安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。而集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。<br>在实际使用分布式版本控制系统的时候，其实很少在两人之间的电脑上推送版本库的修改，因为可能你们俩不在       一个局域网内，两台电脑互相访问不了，也可能今天你的同事病了，他的电脑压根没有开机。因此，分布式版本控制系统通常也有一台充当“中央服务器”的电脑，但这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。</p>
-</li>
-<li><p>git每个历史版本存储完整的文件，svn存储文件差异<br>svn原理上只关心文件内容的具体差异，每次记录有哪些文件更新，以及更新了哪些内容。<br><img src="./1447039115673.png" alt="Alt text"><br>Git记录版本历史只关心文件数据的整体是否发生变化。Git 并不保存文件内容前后变化的差异数据。实际上，Git 更像是把变化的文件作快照后，记录在一个微型的文件系统中。每次提交更新时，它会纵览一遍所有文件的指纹信息并对文件作一快照，然后保存一个指向这次快照的索引。为提高性能，若文件没有变化，Git 不会再次保存，而只对上次保存的快照作一连接。<br><img src="./1447039180974.png" alt="Alt text"></p>
-</li>
-<li><p>git可离线完成大部分操作，svn则相反</p>
-</li>
-<li>git有着更加优雅的分支和合并实现</li>
-</ol>
-
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">方法位于random模块中:</span><br><span class="line"></span><br><span class="line">random.random()			         返回 [ <span class="number">0</span> , <span class="number">1.0</span> ) 之间的浮点数</span><br><span class="line">random.uniform(a, b)             返回 [ a, b ]  之间的浮点数</span><br><span class="line">random.randint(a,b)              返回 [ a,b ]  之间的整数</span><br><span class="line"></span><br><span class="line">random.randrange( [ start ] , stop [,  step ] ) 从指定范围内，按指定基数递增的集合中获取一个随机数。</span><br><span class="line">如 random.randrange(<span class="number">10</span>,<span class="number">100</span>,<span class="number">2</span>)相当于从[ <span class="number">10</span>,<span class="number">12</span>,<span class="number">14</span>,<span class="number">16</span>,........,<span class="number">96</span>,<span class="number">98</span> ]序列获得一个随机数。</span><br><span class="line">	</span><br><span class="line">random.choice( sequence ) 从序列中获取一个随机元素。</span><br><span class="line"></span><br><span class="line">random.shuffle( x[, random ] ) 用于将一个列表中元算打乱。</span><br><span class="line">random.sample( sequence, k )  从指定序列中湖区指定长度的片段</span><br></pre></td></tr></table></figure>
         
         
         <p class="article-more-link">
@@ -285,7 +298,68 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Git/">Git</a>
+  <span></span> <a href="/tags/python/">python</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/11/09/my-first-blog/" title="git简介" itemprop="url">git简介</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
+		
+  <p class="article-time">
+    <time datetime="2015-11-09T13:38:41.000Z" itemprop="datePublished"> 发表于 2015-11-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="git是分布式的，svn是集中式的">git是分布式的，svn是集中式的</h1><h2 id="传统集中式版本控制系统">传统集中式版本控制系统</h2><p><img src="http://7xo9wb.com1.z0.glb.clouddn.com/1.png" alt="Alt text"><br>集中式的版本控制系统都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。多年以来，这已成为版本控制系统的标准做法。<br>这种做法带来了许多好处，特别是相较于老式的本地CVS来说。现在，每个人都可以一定程度上看到项目中的其他人正在做些什么。而管理员也可以轻松掌控每个开发者的权限。<br>事分两面，有好有坏。这么做最显而易见的缺点是中央服务器的单点故障。若是宕机一小时，那么在这一小时内，谁都无法提交更新、还原、对比等，也就无法协同工作。如果中央服务器的磁盘发生故障，并且没做过备份或者备份得不够及时的话，还会有丢失数据的风险。最坏的情况是彻底丢失整个项目的所有历史更改记录，被客户端提取出来的某些快照数据除外，但这样的话依然是个问题，你不能保证所有的数据都已经有人提取出来。</p>
+<h2 id="分布式版本控制系统">分布式版本控制系统</h2><p><img src="http://7xo9wb.com1.z0.glb.clouddn.com/2.png" alt="Alt text"><br>首先，分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。既然每个人电脑上都有一个完整的版本库，那多个人如何协作呢？比方说你在自己电脑上改了文件A，你的同事也在他的电脑上改了文件A，这时，你们俩之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p>
+<p>和集中式版本控制系统相比，分布式版本控制系统的安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。而集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。</p>
+<p>在实际使用分布式版本控制系统的时候，其实很少在两人之间的电脑上推送版本库的修改，因为可能你们俩不在       一个局域网内，两台电脑互相访问不了，也可能今天你的同事病了，他的电脑压根没有开机。因此，分布式版本控制系统通常也有一台充当“中央服务器”的电脑，但这个服务器的作用仅仅是用来方便“交换”大家的修改，没有它大家也一样干活，只是交换修改不方便而已。</p>
+<h1 id="git每个历史版本存储完整的文件，svn存储文件差异">git每个历史版本存储完整的文件，svn存储文件差异</h1><p>svn原理上只关心文件内容的具体差异，每次记录有哪些文件更新，以及更新了哪些内容。<br><img src="http://7xo9wb.com1.z0.glb.clouddn.com/3.png" alt="Alt text"></p>
+<p>Git记录版本历史只关心文件数据的整体是否发生变化。Git 并不保存文件内容前后变化的差异数据。实际上，Git 更像是把变化的文件作快照后，记录在一个微型的文件系统中。每次提交更新时，它会纵览一遍所有文件的指纹信息并对文件作一快照，然后保存一个指向这次快照的索引。为提高性能，若文件没有变化，Git 不会再次保存，而只对上次保存的快照作一连接。</p>
+<p><img src="http://7xo9wb.com1.z0.glb.clouddn.com/4.png" alt="Alt text"></p>
+<h1 id="git可离线完成大部分操作，svn则相反">git可离线完成大部分操作，svn则相反</h1><h1 id="git有着更加优雅的分支和合并实现">git有着更加优雅的分支和合并实现</h1>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/git/">git</a>
   </div>
 
 </div>
@@ -320,7 +394,7 @@
 		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
 		
   <p class="article-time">
-    <time datetime="2015-11-09T13:35:27.054Z" itemprop="datePublished"> 發表於 2015-11-09</time>
+    <time datetime="2015-11-09T13:35:27.054Z" itemprop="datePublished"> 发表于 2015-11-09</time>
     
   </p>
 </header>
@@ -367,10 +441,10 @@
 
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -380,11 +454,21 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Git/" title="Git">Git<sup>1</sup></a></li>
+				<li><a href="/tags/ml/" title="ml">ml<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
 			
 		
 		</ul>
@@ -393,7 +477,7 @@
 
   
   <div class="archiveslist">
-    <p class="asidetitle"><a href="/archives">歸檔</a></p>
+    <p class="asidetitle"><a href="/archives">归档</a></p>
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li></ul>
   </div>
 
@@ -536,7 +620,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

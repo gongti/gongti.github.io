@@ -4,36 +4,42 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>机器学习-交叉验证 | GongTi . Blog</title>
+    <title>交叉验证 | GongTi . Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="GongTi">
     
 
     
-    <meta name="description" content="机器学习 交叉验证如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。
+    <meta name="description" content="如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。
 训练集用来训练模型
 验证集用来模型选择
 测试集用来最终对学习方法的评估
-在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。">
+在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。
+
+但是，在许多实际应">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习-交叉验证">
+<meta property="og:title" content="交叉验证">
 <meta property="og:url" content="http://yoursite.com/2015/11/13/机器学习-交叉验证/index.html">
 <meta property="og:site_name" content="GongTi . Blog">
-<meta property="og:description" content="机器学习 交叉验证如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。
+<meta property="og:description" content="如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。
 训练集用来训练模型
 验证集用来模型选择
 测试集用来最终对学习方法的评估
-在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。">
+在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。
+
+但是，在许多实际应">
 <meta property="og:image" content="http://yoursite.com/./1446197312823.png">
-<meta property="og:updated_time" content="2015-11-13T09:02:43.196Z">
+<meta property="og:updated_time" content="2015-11-13T10:29:42.165Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习-交叉验证">
-<meta name="twitter:description" content="机器学习 交叉验证如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。
+<meta name="twitter:title" content="交叉验证">
+<meta name="twitter:description" content="如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。
 训练集用来训练模型
 验证集用来模型选择
 测试集用来最终对学习方法的评估
-在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。">
+在学习到不同复杂度的模型中，选择对验证集有最小预测误差的模型，由于验证集有足够多的数据，用它对模型进行选择是有效的。
+
+但是，在许多实际应">
 
     
     <link rel="alternative" href="/atom.xml" title="GongTi . Blog" type="application/atom+xml">
@@ -61,7 +67,7 @@
 				<h1 class="site-name"><a href="/" title="GongTi . Blog">GongTi . Blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -93,27 +99,27 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/11/13/机器学习-交叉验证/" title="机器学习-交叉验证" itemprop="url">机器学习-交叉验证</a>
+      <a href="/2015/11/13/机器学习-交叉验证/" title="交叉验证" itemprop="url">交叉验证</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="GongTi" target="_blank" itemprop="author">GongTi</a>
 		
   <p class="article-time">
-    <time datetime="2015-11-13T09:02:24.000Z" itemprop="datePublished"> 發表於 2015-11-13</time>
+    <time datetime="2015-11-13T09:02:24.000Z" itemprop="datePublished"> 发表于 2015-11-13</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习_交叉验证"><span class="toc-number">1.</span> <span class="toc-text">机器学习 交叉验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-简单交叉验证"><span class="toc-number">1.1.</span> <span class="toc-text">1.简单交叉验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-K折交叉验证"><span class="toc-number">1.2.</span> <span class="toc-text">2.K折交叉验证</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简单交叉验证"><span class="toc-number">1.</span> <span class="toc-text">1.简单交叉验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-K折交叉验证"><span class="toc-number">2.</span> <span class="toc-text">2.K折交叉验证</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#K-fold"><span class="toc-number">2.1.</span> <span class="toc-text">K-fold</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stratified_k-fold"><span class="toc-number">2.2.</span> <span class="toc-text">Stratified k-fold</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Leave-One-Out"><span class="toc-number">2.3.</span> <span class="toc-text">Leave-One-Out</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="机器学习_交叉验证">机器学习 交叉验证</h2><p>如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。</p>
+		<p>如果给定的样本数据充足，进行模型选择的一种简单方法是：随机将数据集切分为三部分，分为训练集（training set）、验证集（validation set）和测试集（test set）。</p>
 <pre><code>训练集用来训练模型
 验证集用来模型选择
 测试集用来最终对学习方法的评估
@@ -121,14 +127,14 @@
 <hr>
 <p>但是，在许多实际应用中数据是不足的，为了选择好的模型，可以采用交叉验证方法，交叉验证的基本思想是重复的使用数据；把给定的数据进行切分，将切分的数据集组合为训练集和测试集，在此基础上反复地进行训练。测试以及模型选择。</p>
 <hr>
-<h3 id="1-简单交叉验证">1.简单交叉验证</h3><p>简单交叉验证方法是：首先随机地将已给数据分为两部分，一部分作为训练集，另一部分作为测试集（如，70%的数据为训练集，30%的数据作为测试集）；然后用训练集在各种条件下（如，不同的参个数）训练模型，从而得到不同的模型；在测试集上评价各个模型的测试误差，选出测试误差最小的模型。</p>
+<h1 id="1-简单交叉验证">1.简单交叉验证</h1><p>简单交叉验证方法是：首先随机地将已给数据分为两部分，一部分作为训练集，另一部分作为测试集（如，70%的数据为训练集，30%的数据作为测试集）；然后用训练集在各种条件下（如，不同的参个数）训练模型，从而得到不同的模型；在测试集上评价各个模型的测试误差，选出测试误差最小的模型。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> cross_validation</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>iris = datasets.load_iris()</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>iris.data.shape, iris.target.shape</span><br><span class="line">((<span class="number">150</span>, <span class="number">4</span>), (<span class="number">150</span>,))</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = cross_validation.train_test_split(</span><br><span class="line"><span class="prompt">... </span>    iris.data, iris.target, test_size=<span class="number">0.4</span>, random_state=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train.shape, y_train.shape</span><br><span class="line">((<span class="number">90</span>, <span class="number">4</span>), (<span class="number">90</span>,))</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_test.shape, y_test.shape</span><br><span class="line">((<span class="number">60</span>, <span class="number">4</span>), (<span class="number">60</span>,))</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf = svm.SVC(kernel=<span class="string">'linear'</span>, C=<span class="number">1</span>).fit(X_train, y_train)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf.score(X_test, y_test)                           </span><br><span class="line"><span class="number">0.96</span>...</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="2-K折交叉验证">2.K折交叉验证</h3><p>应用最多的就是K折交叉验证（K-fold Cross Valication）方法如下：首先随机地将已给的数据切分为S个互不相同的子集；然后利用 S-1 个子集的数据训练模型，利用余下的子集测试模型，将这一过程对可能的K中选择重复进行；最后选出K次测评中平均测试误差的最小的模型。</p>
+<h1 id="2-K折交叉验证">2.K折交叉验证</h1><p>应用最多的就是K折交叉验证（K-fold Cross Valication）方法如下：首先随机地将已给的数据切分为S个互不相同的子集；然后利用 S-1 个子集的数据训练模型，利用余下的子集测试模型，将这一过程对可能的K中选择重复进行；最后选出K次测评中平均测试误差的最小的模型。</p>
 <p>不同的划分策略：</p>
-<p>####K-fold<br>根据数据集，进行横向切分。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> KFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>kf = KFold(<span class="number">4</span>, n_folds=<span class="number">2</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> kf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span> <span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span>] [<span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X = np.array([[<span class="number">0.</span>, <span class="number">0.</span>], [<span class="number">1.</span>, <span class="number">1.</span>], [-<span class="number">1.</span>, -<span class="number">1.</span>], [<span class="number">2.</span>, <span class="number">2.</span>]])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>y = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]</span><br></pre></td></tr></table></figure></p>
-<p>####Stratified k-fold<br>每个集合中样本标签比例大致相等。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> StratifiedKFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>labels = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>skf = StratifiedKFold(labels, <span class="number">3</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> skf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">5</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">2</span> <span class="number">6</span> <span class="number">7</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>] [<span class="number">3</span> <span class="number">8</span> <span class="number">9</span>]</span><br></pre></td></tr></table></figure></p>
-<p>####Leave-One-Out<br>K折交叉验证的特殊形式K=N,<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> LeaveOneOut</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>loo = LeaveOneOut(<span class="number">4</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> loo:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span>] [<span class="number">2</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>] [<span class="number">3</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="K-fold">K-fold</h2><p>根据数据集，进行横向切分。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> KFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>kf = KFold(<span class="number">4</span>, n_folds=<span class="number">2</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> kf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span> <span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span>] [<span class="number">2</span> <span class="number">3</span>]</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X = np.array([[<span class="number">0.</span>, <span class="number">0.</span>], [<span class="number">1.</span>, <span class="number">1.</span>], [-<span class="number">1.</span>, -<span class="number">1.</span>], [<span class="number">2.</span>, <span class="number">2.</span>]])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>y = np.array([<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>])</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]</span><br></pre></td></tr></table></figure></p>
+<h2 id="Stratified_k-fold">Stratified k-fold</h2><p>每个集合中样本标签比例大致相等。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> StratifiedKFold</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>labels = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>skf = StratifiedKFold(labels, <span class="number">3</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> skf:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">2</span> <span class="number">3</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">0</span> <span class="number">1</span> <span class="number">4</span> <span class="number">5</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">8</span> <span class="number">9</span>] [<span class="number">2</span> <span class="number">6</span> <span class="number">7</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span>] [<span class="number">3</span> <span class="number">8</span> <span class="number">9</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="Leave-One-Out">Leave-One-Out</h2><p>K折交叉验证的特殊形式K=N,<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> LeaveOneOut</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>loo = LeaveOneOut(<span class="number">4</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> train, test <span class="keyword">in</span> loo:</span><br><span class="line"><span class="prompt">... </span>    print(<span class="string">"%s %s"</span> % (train, test))</span><br><span class="line">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">0</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">2</span> <span class="number">3</span>] [<span class="number">1</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">3</span>] [<span class="number">2</span>]</span><br><span class="line">[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>] [<span class="number">3</span>]</span><br></pre></td></tr></table></figure></p>
 <hr>
 <hr>
 <p>使用交叉验证最简单的方式就是使用 <code>cross_val_score</code> 函数<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span>clf = svm.SVC(kernel=<span class="string">'linear'</span>, C=<span class="number">1</span>)</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores = cross_validation.cross_val_score(</span><br><span class="line"><span class="prompt">... </span>   clf, iris.data, iris.target, cv=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>scores                                              </span><br><span class="line">array([ <span class="number">0.96</span>...,  <span class="number">1.</span>  ...,  <span class="number">0.96</span>...,  <span class="number">0.96</span>...,  <span class="number">1.</span>        ])</span><br><span class="line"></span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>print(<span class="string">"Accuracy: %0.2f (+/- %0.2f)"</span> % (scores.mean(), scores.std() * <span class="number">2</span>))</span><br><span class="line">Accuracy: <span class="number">0.98</span> (+/- <span class="number">0.03</span>)</span><br></pre></td></tr></table></figure></p>
@@ -140,13 +146,18 @@
 <div class="article-catetags">
 
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/ml/">ml</a>
+  </div>
+
 </div>
 
 
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/11/13/机器学习-交叉验证/" data-title="机器学习-交叉验证 | GongTi . Blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/11/13/机器学习-交叉验证/" data-title="交叉验证 | GongTi . Blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -159,11 +170,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2015/11/13/机器学习算法/" title="机器学习算法">
+  <strong>上一篇：</strong><br/>
+  <span>
+  机器学习算法</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2015/11/13/python记录/"  title="python记录">
+<a href="/2015/11/13/python记录/"  title="python 随机数">
  <strong>下一篇：</strong><br/> 
- <span>python记录
+ <span>python 随机数
 </span>
 </a>
 </div>
@@ -173,17 +192,17 @@
 	
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习_交叉验证"><span class="toc-number">1.</span> <span class="toc-text">机器学习 交叉验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-简单交叉验证"><span class="toc-number">1.1.</span> <span class="toc-text">1.简单交叉验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-K折交叉验证"><span class="toc-number">1.2.</span> <span class="toc-text">2.K折交叉验证</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简单交叉验证"><span class="toc-number">1.</span> <span class="toc-text">1.简单交叉验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-K折交叉验证"><span class="toc-number">2.</span> <span class="toc-text">2.K折交叉验证</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#K-fold"><span class="toc-number">2.1.</span> <span class="toc-text">K-fold</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stratified_k-fold"><span class="toc-number">2.2.</span> <span class="toc-text">Stratified k-fold</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Leave-One-Out"><span class="toc-number">2.3.</span> <span class="toc-text">Leave-One-Out</span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -193,11 +212,21 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Git/" title="Git">Git<sup>1</sup></a></li>
+				<li><a href="/tags/ml/" title="ml">ml<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>1</sup></a></li>
+			
+		
 			
 		
 		</ul>
@@ -206,7 +235,7 @@
 
   
   <div class="archiveslist">
-    <p class="asidetitle"><a href="/archives">歸檔</a></p>
+    <p class="asidetitle"><a href="/archives">归档</a></p>
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li></ul>
   </div>
 
@@ -426,7 +455,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
